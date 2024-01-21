@@ -1,0 +1,102 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    
+   }
+  main{
+    height : 100vh ;
+    width : 100vw;
+    display : flex;
+    justify-content : center;
+    align-items : center;
+    background-color: #222629;
+    
+  }
+  
+  
+  .container{
+    
+    
+   /* background-color : #f0f0f3;*/
+     
+  }
+  #time{
+      font-family:monospace;
+    /*background-color: #f0f0f3;*/
+    text-align: center;
+      font-size : 4rem;
+      font-weight : normal;
+      margin : 0 2rem;
+      color: white;
+    
+    }
+  #buttons{
+       margin : 2rem;
+       display : flex;
+       justify-content : space-between;
+       align-items : center;
+       /*background-color : #b0f0f3;*/
+    }
+  
+  
+  
+  .btn{
+    font-family:monospace;
+    font-size : 2rem;
+    font-weight : bold;
+    padding : 1rem 2rem;
+    border-radius : 5px;
+    border : none;
+    cursor : pointer;
+   
+   
+  }
+  
+  #reset{
+     --color: rgb(69, 142, 215);
+  }
+  
+  #start{
+     --color: green;
+  }
+  
+  
+  #stop{
+     --color: red;
+  }
+  /* CSS */
+  .btn{
+    --b: 3px;   /* border thickness */
+    --s: .45em; /* size of the corner */
+   
+  
+    padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+    color: var(--color);
+    --_p: var(--s);
+    background:
+      conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+      var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+    transition: .3s linear, color 0s, background-color 0s;
+    outline: var(--b) solid #0000;
+    outline-offset: .6em;
+    font-size: 16px;
+  
+    border: 0;
+  
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .btn:hover,
+  .button-89:focus-visible{
+    --_p: 0px;
+    outline-color: var(--color);
+    outline-offset: .05em;
+  }
+  
+  .btn:active {
+    background: var(--color);
+    color: #fff;
+  }
